@@ -165,12 +165,10 @@ def Screenshot():
 
 
 def takeScreenshots(i, maxShots, intShots):
-    shot = 0
-    while shot < maxShots:
-    	shottime = time.strftime('%Y_%m_%d_%H_%M_%S')
-    	Screenshot()
-    	time.sleep(intShots)
-    	shot += 1
+    for _ in range(maxShots):
+        shottime = time.strftime('%Y_%m_%d_%H_%M_%S')
+        Screenshot()
+        time.sleep(intShots)
 
 
 
